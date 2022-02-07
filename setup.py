@@ -2,10 +2,9 @@ from setuptools import setup
 
 setup(
     name="map-extractor",
-    version="1.0.0",
+    version="1.1.0",
     install_requires=[
         "Pillow>=9.0.1,<9.1.0",
-        "more-itertools>=8.12.0,<8.13.0",
         "nbtlib>=2.0.4,<2.1.0",
         "tqdm>=4.62.3,<4.63.0"
     ],
