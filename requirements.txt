@@ -1,0 +1,6 @@
+git+https://github.com/Lapis256/bedrock@master; sys_platform == 'linux' and platform_machine == 'aarch64'
+git+https://github.com/BluCodeGH/bedrock@master; platform_machine != 'aarch64'
+more-itertools
+Pillow
+nbtlib
+tqdm
