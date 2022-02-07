@@ -1,11 +1,11 @@
 # map-extractor
 指定したワールドのマップデータを全て出力するツールです。
 
-# 導入
-## 依存関係
+## 導入
+### 依存関係
 Python 3.8 以上
 
-## インストール
+### インストール
 ```
 pip install git+https://github.com/Lapis256/map-extractor.git
 ```
