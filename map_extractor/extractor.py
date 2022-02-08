@@ -1,8 +1,8 @@
 from io import BytesIO
 
-from nbtlib import Compound
 from PIL import Image
 import numpy as np
+import amulet_nbt
 
 
 __all__ = (
@@ -19,14 +19,14 @@ def iter_colors_from_world(world):
         if not key.startswith(b"map_"):
             continue
 
-        compound = Compound.parse(BytesIO(value), "little")[""]
+        compound = amulet_nbt.load(value, compressed=False, little_endian=True)
         colors = compound["colors"]
         if len(set(colors)) <= 1:
             continue
-        yield compound["mapId"].unpack(), colors
+        yield compound["mapId"].value, colors
 
 
 def generate_map_image(colors):
-    array = np.uint8(np.fromiter(colors, int))
+    array = np.fromiter(colors, np.uint8)
     image = array.reshape((MAP_WIDTH, MAP_HEIGHT, 4))
     return Image.fromarray(image)
