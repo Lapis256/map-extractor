@@ -2,12 +2,12 @@
 指定したワールドのマップデータを全て出力するツールです。Bedrock Edition限定です。
 
 ## 導入
-### 依存関係
-Python 3.8 以上
-
 ### インストール
+[Releases](https://github.com/Lapis256/map-extractor/releases) から v2.0.0 以降の実行ファイルをダウンロードして、パスを通します。
+
+cargo をインストール済みの場合は以下のコマンドでインストール可能です。
 ```
-pip install git+https://github.com/Lapis256/map-extractor.git
+cargo install --git https://github.com/Lapis256/map-extractor
 ```
 
 ## 使い方
